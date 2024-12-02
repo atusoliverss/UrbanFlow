@@ -1,4 +1,4 @@
-# Infracity
+# UrbanFlow
 
 ## Este sistema de gestão de infraestrutura urbana é uma plataforma digital projetada para otimizar a administração dos serviços públicos e melhorar a qualidade de vida dos moradores de uma cidade. Ele permite que os moradores avaliem diversos aspectos do ambiente urbano, incluindo transporte e mobilidade, saneamento, segurança, serviços públicos, áreas verdes, e muito mais. A plataforma centraliza dados e feedbacks dos moradores para fornecer uma visão detalhada das áreas que precisam de melhorias.
 
