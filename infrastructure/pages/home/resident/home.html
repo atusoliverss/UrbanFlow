@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamação / Avaliação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../resident/home.css">
+    <link rel="shortcut icon" href="../../../assets/images/logo_icon.png" type="image/x-icon">
+</head>
+<body class="bg-secondary">
+    <header id="logo-container" class="bg-dark">
+        <div class="container-md d-flex justify-content-center align-items-center py-2">
+            <img class="logo " src="../../../assets/images/logo_icon.png" alt="logo do sistema">
+            <h1 class="fs-2 m-0 ms-2 text-light">InfraCity</h1>
+        </div>
+        <!-- <nav class="navbar navbar-expand-lg bg-secondary text-light">
+            <div class="container-sm">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item me-3">
+                            <a href="#who-are-we" class="text-light text-decoration-none">Quem somos?</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#what-is-our-objective" class="text-light text-decoration-none">Qual é o nosso objetivo?</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#who-can-use" class="text-light text-decoration-none">Quem pode utilizar o nosso sistema?</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a href="#what-the-system-resolves" class="text-light text-decoration-none">Quais problemas o sistema resolve?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#what-are-the-main-resources" class="text-light text-decoration-none">Quais são os principais recursos do sistema?</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+    </header>
+    <main class="bg-light py-1 mx-3 m-3  rounded">
+        <!-- Container principal -->
+        <div class="container my-5">
+           <!-- Formulário -->
+           <div class="card shadow rounded">
+               <div class="card-body">
+                   <form id="form-solicitacao">
+                       <div class="text-center mb-4">
+                           <h1>Reclamações e Avaliações</h1>
+                           <p class="text-muted">Nos ajude a melhorar nossa cidade! Registre suas reclamações ou compartilhe sua avaliação.</p>
+                       </div>
+                       
+                       <!-- <div class="mb-3">
+                           <label for="nome" class="form-label">Nome do Morador (opcional)</label>
+                           <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+                       </div>
+   
+                       
+                       <div class="mb-3">
+                           <label for="contato" class="form-label">Contato (e-mail ou telefone)</label>
+                           <input type="text" class="form-control" id="contato" placeholder="Digite seu e-mail ou telefone">
+                       </div> -->
+   
+                       <!-- Tipo de solicitação -->
+                       <div class="mb-3">
+                           <label class="form-label">Tipo de Solicitação</label>
+                           <select class="form-select border-success-subtle" id="tipoSolicitacao">
+                               <option value="reclamacao" selected>Reclamação</option>
+                               <option value="avaliacao">Avaliação</option>
+                           </select>
+                       </div>
+   
+                       <!-- Categoria para reclamação -->
+                       <div class="mb-3" id="reclamacao-categorias">
+                           <label class="form-label">Categoria</label>
+                           <select class="form-select border-success-subtle">
+                               <option value="iluminacao">Iluminação Pública</option>
+                               <option value="pavimentacao">Pavimentação</option>
+                               <option value="saneamento">Saneamento</option>
+                               <option value="outros">Outros</option>
+                           </select>
+                       </div>
+   
+                       <!-- Notas para avaliação -->
+                       <div class="mb-3 d-none" id="avaliacao-categorias">
+                           <label class="form-label">Atribua uma nota (1 a 5) para cada categoria:</label>
+                           <div class="mb-2">
+                               <label for="nota-iluminacao" class="form-label">Iluminação Pública</label>
+                               <input type="number" class="form-control border-success-subtle" id="nota-iluminacao" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
+                           </div>
+                           <div class="mb-2">
+                               <label for="nota-pavimentacao" class="form-label">Pavimentação</label>
+                               <input type="number" class="form-control border-success-subtle" id="nota-pavimentacao" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
+                           </div>
+                           <div class="mb-2">
+                               <label for="nota-saneamento" class="form-label">Saneamento</label>
+                               <input type="number" class="form-control border-success-subtle" id="nota-saneamento" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
+                           </div>
+                           <div class="mb-2">
+                               <label for="nota-outros" class="form-label">Outros</label>
+                               <div class="d-flex justify-content-between">
+                                   <input type="text" class="form-control border-success-subtle" id="nota-outros-text" placeholder="Informe o nome da categoria">
+                                   <input type="number" class="form-control border-success-subtle" id="nota-outros" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
+                               </div>
+                           </div>
+                       </div>
+   
+                       <!-- Descrição -->
+                       <div class="mb-3">
+                           <label for="descricao" class="form-label">Descrição do Problema ou Avaliação</label>
+                           <textarea class="form-control border-success-subtle" id="descricao" rows="4" placeholder="Descreva aqui..."></textarea>
+                       </div>
+   
+                       <!-- Anexar arquivos -->
+                       <div class="mb-3" id="anexo-evidencias">
+                           <label for="anexo" class="form-label">Anexar arquivos ou fotos</label>
+                           <input type="file" class="form-control border-success-subtle" id="anexo">
+                       </div>
+   
+                       <!-- Botões -->
+                       <div class="d-flex justify-content-around">
+                           <button type="reset" class="btn btn-outline-danger">Limpar Formulário</button>
+                           <button type="submit" class="btn btn-outline-success">Enviar Solicitação</button>
+                       </div>
+                   </form>
+               </div>
+           </div>
+       </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-light text-center py-3">
+        <p class="mb-4">&copy; 2024 InfraCity - Todos os direitos reservados.</p>
+        <nav class="d-flex">
+            <div class="container-sm">
+                <ul class="nav justify-content-around">
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Política de Privacidade</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Termos de Uso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="text-light text-decoration-none">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script>
+        const tipoSolicitacao = document.getElementById('tipoSolicitacao');
+        const reclamacaoCategorias = document.getElementById('reclamacao-categorias');
+        const avaliacaoCategorias = document.getElementById('avaliacao-categorias');
+        const anexoEvidencias = document.getElementById('anexo-evidencias');
+        // Alternar visibilidade com base no tipo de solicitação
+        tipoSolicitacao.addEventListener('change', () => {
+            if (tipoSolicitacao.value === 'reclamacao') {
+                reclamacaoCategorias.classList.remove('d-none');
+                avaliacaoCategorias.classList.add('d-none');
+                anexoEvidencias.classList.remove('d-none');
+            } else if (tipoSolicitacao.value === 'avaliacao') {
+                avaliacaoCategorias.classList.remove('d-none');
+                reclamacaoCategorias.classList.add('d-none');
+                anexoEvidencias.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+</html>

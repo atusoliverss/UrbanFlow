@@ -1,0 +1,36 @@
+@import url(../../assets/css/global.css);
+
+header{
+    background-color: #253850 !important;
+    color: white;
+    font-size: large;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-icon{
+    width: 80px;
+    height: 80px;
+}
+
+#form-custom{
+    margin: 20px;
+    padding: 10px;
+    background-color: #F2F2F2;
+    width: 50%;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    #form-custom{
+        width: 80%;
+    }
+}
