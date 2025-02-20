@@ -1,87 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../../assets/images/logo_icon.png" type="image/x-icon">
-    <!--Links css-->
     <link rel="stylesheet" href="../login/login.css" />
-  </head>
-  <body class="bg-secondary">
+</head>
+<body class="bg-secondary">
     <header id="logo-container" class="bg-dark justify-content-center">
-      <div class="container-md d-flex justify-content-center align-items-center py-3">
-        <div class="d-flex align-items-center">
-            <img class="logo" src="../../assets/images/logo_icon.png" alt="logo do sistema">
-            <h1 class="h2 m-0 ml-2">
-                <a href="../../pages/index.html" class="text-light text-decoration-none">UrbanFlow</a>
-            </h1>
+        <div class="container-md d-flex justify-content-center align-items-center py-3">
+            <div class="d-flex align-items-center">
+                <img class="logo" src="../../assets/images/logo_icon.png" alt="logo do sistema">
+                <h1 class="h2 m-0 ml-2">
+                    <a href="../../pages/index.html" class="text-light text-decoration-none">UrbanFlow</a>
+                </h1>
+            </div>
         </div>
-    </div>
-   </header>
-   <main class="mx-3 mb-3">
-     <div class="container-login my-3 ">
-       <div class="img-box rounded-left">
-         <img src="../../assets/images/login.svg" alt="Tela login" />
-       </div>
-       <div class="content-box bg-light rounded-right">
-         <div class="form-box p-3 bg-white rounded">
-           <h2>Login</h2>
-           <form action="../home/adm/home-adm.html">
-             <div class="input-box">
-               <span>Username</span>
-               <input type="email" class="border border-success-subtle form-control" placeholder="@mail.com" />
-             </div>
-             <div class="input-box">
-               <span>Password</span>
-               <input type="password" class="border border-success-subtle form-control" placeholder="password" />
-             </div>
-             <div class="remember">
-               <label >
-                 <input type="checkbox"> Remember me
-               </label>
-               <a href="#">Esqueceu a senha ?</a>
-             </div>
-             <div class="input-box">
-               <input type="submit" value="Entrar">
-             </div>
-             <div class="input-box">
-               <p>Não tem uma conta ? <a href="../register/cadastro.html">Inscrever-se</a></p>
-             </div>
-           </form>
-           <h3>Logar com</h3>
-           <ul class="ul">
-             <li><img src="../../assets/images/facebook.png" alt="facebook"></li>
-             <li><img src="../../assets/images/google.png" alt="google"></li>
-             <li><img src="../../assets/images/apple.png" alt="apple"></li>
-           </ul>
-         </div>
-       </div>
-     </div>
-   </main>
-   <!-- Rodapé -->
-   <footer class="bg-dark text-light text-center py-3">
-    <p class="mb-4">&copy; 2025 UrbanFlow - Todos os direitos reservados.</p>
-    <nav class="d-flex">
-        <div class="container-sm">
-            <ul class="nav justify-content-around">
-                <li class="nav-item">
-                    <a href="#" class="text-light text-decoration-none">Política de Privacidade</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="text-light text-decoration-none">Termos de Uso</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="text-light text-decoration-none">Suporte</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="text-light text-decoration-none">Contato</a>
-                </li>
-            </ul>
+    </header>
+    <main class="mx-3 mb-3">
+        <div class="container-login my-3">
+            <div class="img-box rounded-left">
+                <img src="../../assets/images/login.svg" alt="Tela login" />
+            </div>
+            <div class="content-box bg-light rounded-right">
+                <div class="form-box p-3 bg-white rounded">
+                    <h2>Login</h2>
+                    <form id="loginForm">
+                        <div class="input-box">
+                            <span>Email</span>
+                            <input type="email" id="email" class="border border-success-subtle form-control" placeholder="@mail.com" required />
+                        </div>
+                        <div class="input-box">
+                            <span>Senha</span>
+                            <input type="password" id="senha" class="border border-success-subtle form-control" placeholder="password" required />
+                        </div>
+                        <p id="error-message" class="text-danger text-center"></p>
+                        <div class="remember">
+                            <label>
+                                <input type="checkbox"> Lembrar-me
+                            </label>
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                        <div class="input-box">
+                            <button type="submit" id="loginBtn" class="btn btn-primary w-100">Entrar</button>
+                        </div>
+                        <div class="input-box">
+                            <p>Não tem uma conta? <a href="../register/cadastro.html">Inscrever-se</a></p>
+                        </div>
+                    </form>
+                    <h3>Logar com</h3>
+                    <ul class="ul">
+                        <li><img src="../../assets/images/facebook.png" alt="facebook"></li>
+                        <li><img src="../../assets/images/google.png" alt="google"></li>
+                        <li><img src="../../assets/images/apple.png" alt="apple"></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </nav>
-</footer>
-  </body>
+    </main>
+    <footer class="bg-dark text-light text-center py-3">
+        <p class="mb-4">&copy; 2025 UrbanFlow - Todos os direitos reservados.</p>
+        <nav class="d-flex">
+            <div class="container-sm">
+                <ul class="nav justify-content-around">
+                    <li class="nav-item"><a href="#" class="text-light text-decoration-none">Política de Privacidade</a></li>
+                    <li class="nav-item"><a href="#" class="text-light text-decoration-none">Termos de Uso</a></li>
+                    <li class="nav-item"><a href="#" class="text-light text-decoration-none">Suporte</a></li>
+                    <li class="nav-item"><a href="#" class="text-light text-decoration-none">Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+            const errorMessage = document.getElementById("error-message");
+            const loginBtn = document.getElementById("loginBtn");
+            
+            errorMessage.innerText = "";
+            loginBtn.disabled = true;
+            loginBtn.innerText = "Entrando...";
+
+            try {
+                const response = await fetch("http://localhost:8080/api/usuarios/login", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, senha })
+                });
+
+                if (!response.ok) {
+                    throw new Error("Erro no login. Verifique suas credenciais.");
+                }
+
+                const data = await response.json();
+                sessionStorage.setItem("usuario", JSON.stringify(data));
+                window.location.href = "../home/adm/home-adm.html";
+            } catch (error) {
+                errorMessage.innerText = error.message;
+            } finally {
+                loginBtn.disabled = false;
+                loginBtn.innerText = "Entrar";
+            }
+        });
+    </script>
+</body>
 </html>
