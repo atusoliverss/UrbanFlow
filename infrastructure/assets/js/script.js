@@ -25,12 +25,17 @@ export async function saveUser(userData, url) {
 
 export async function saveReclamacao(reclamacaoData) {
   try {
-    console.log(JSON.stringify(reclamacaoData));
-    const response = await axios.post("http://localhost:8080/reclamacoes/save", reclamacaoData);
-    return response.data; // Aqui esperamos um objeto no formato esperado
+    console.log("Enviando reclamação:", JSON.stringify(reclamacaoData));
+    const response = await axios.post("http://localhost:8080/reclamacoes/save", reclamacaoData, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    return response.data; // Retorna os dados da resposta do servidor
   } catch (error) {
-    console.error('Erro ao salvar a reclamação:', error);
-    throw error;
+    console.error("Erro ao salvar a reclamação:", error);
+    throw error; // Propaga o erro para ser tratado no outro arquivo
   }
 }
 
