@@ -11,10 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (tipoSolicitacao === "reclamacao") {
             const descricao = document.getElementById("descricao").value;
-            const categoria = document.getElementById("reclamacao-categorias").querySelector("select").value;
-            const morador = "12345678901"; // Substituir pelo CPF dinâmico do morador logado
+            const categoria = document.getElementById("categoria-select").querySelector("select").value;
             const dataReclamacao = new Date().toISOString();
-
+        
+            // Recuperar o morador logado do localStorage
+            const userData = JSON.parse(localStorage.getItem("user"));
+            console.log(JSON.stringify(userData));
+            const morador = userData && userData.email ? userData.email : null; 
+        
+            if (!morador) {
+                alert("Erro: Usuário não identificado. Faça login novamente.");
+                return;
+            }
+        
             // Criar objeto JSON para enviar
             const reclamacaoData = {
                 descricao: descricao,
@@ -23,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 morador: morador,
                 servico: categoria
             };
-
+        
             try {
                 await saveReclamacao(reclamacaoData);
                 alert("Reclamação enviada com sucesso!");
@@ -32,5 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert("Erro ao enviar reclamação. Verifique a conexão com o servidor.");
             }
         }
+        
     });
 });
