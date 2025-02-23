@@ -17,34 +17,6 @@
             <img class="logo " src="../../../assets/images/logo_icon.png" alt="logo do sistema">
             <h1 class="fs-2 m-0 ms-2 text-light">UrbanFlow</h1>
         </div>
-        <!-- <nav class="navbar navbar-expand-lg bg-secondary text-light">
-            <div class="container-sm">
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav justify-content-center">
-                        <li class="nav-item me-3">
-                            <a href="#who-are-we" class="text-light text-decoration-none">Quem somos?</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a href="#what-is-our-objective" class="text-light text-decoration-none">Qual é o nosso objetivo?</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a href="#who-can-use" class="text-light text-decoration-none">Quem pode utilizar o nosso sistema?</a>
-                        </li>
-                        <li class="nav-item me-3">
-                            <a href="#what-the-system-resolves" class="text-light text-decoration-none">Quais problemas o sistema resolve?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#what-are-the-main-resources" class="text-light text-decoration-none">Quais são os principais recursos do sistema?</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
     </header>
     <main class="bg-light py-1 mx-3 m-3  rounded">
         <!-- Container principal -->
@@ -57,17 +29,6 @@
                            <h1>Reclamações e Avaliações</h1>
                            <p class="text-muted">Nos ajude a melhorar nossa cidade! Registre suas reclamações ou compartilhe sua avaliação.</p>
                        </div>
-                       
-                       <!-- <div class="mb-3">
-                           <label for="nome" class="form-label">Nome do Morador (opcional)</label>
-                           <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
-                       </div>
-   
-                       
-                       <div class="mb-3">
-                           <label for="contato" class="form-label">Contato (e-mail ou telefone)</label>
-                           <input type="text" class="form-control" id="contato" placeholder="Digite seu e-mail ou telefone">
-                       </div> -->
    
                        <!-- Tipo de solicitação -->
                        <div class="mb-3">
@@ -79,39 +40,99 @@
                        </div>
    
                        <!-- Categoria para reclamação -->
-                       <div class="mb-3" id="reclamacao-categorias">
-                           <label class="form-label">Categoria</label>
-                           <select class="form-select border-success-subtle">
-                               <option value="iluminacao">Iluminação Pública</option>
-                               <option value="pavimentacao">Pavimentação</option>
-                               <option value="saneamento">Saneamento</option>
-                               <option value="outros">Outros</option>
-                           </select>
-                       </div>
-   
-                       <!-- Notas para avaliação -->
-                       <div class="mb-3 d-none" id="avaliacao-categorias">
-                           <label class="form-label">Atribua uma nota (1 a 5) para cada categoria:</label>
-                           <div class="mb-2">
-                               <label for="nota-iluminacao" class="form-label">Iluminação Pública</label>
-                               <input type="number" class="form-control border-success-subtle" id="nota-iluminacao" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
-                           </div>
-                           <div class="mb-2">
-                               <label for="nota-pavimentacao" class="form-label">Pavimentação</label>
-                               <input type="number" class="form-control border-success-subtle" id="nota-pavimentacao" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
-                           </div>
-                           <div class="mb-2">
-                               <label for="nota-saneamento" class="form-label">Saneamento</label>
-                               <input type="number" class="form-control border-success-subtle" id="nota-saneamento" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
-                           </div>
-                           <div class="mb-2">
-                               <label for="nota-outros" class="form-label">Outros</label>
-                               <div class="d-flex justify-content-between">
-                                   <input type="text" class="form-control border-success-subtle" id="nota-outros-text" placeholder="Informe o nome da categoria">
-                                   <input type="number" class="form-control border-success-subtle" id="nota-outros" min="1" max="5" placeholder="Digite uma nota de 1 a 5">
-                               </div>
-                           </div>
-                       </div>
+                        <div class="mb-3" id="reclamacao-categorias">
+                            <label class="form-label">Categoria</label>
+                            <select class="form-select border-success-subtle">
+                                <option value="saude">Saúde Pública</option>
+                                <option value="educacao">Educação Pública</option>
+                                <option value="seguranca">Segurança Pública</option>
+                                <option value="transporte">Transporte Público</option>
+                                <option value="saneamento">Saneamento Básico</option>
+                                <option value="energia">Energia Elétrica</option>
+                                <option value="assistencia">Assistência Social</option>
+                                <option value="justica">Justiça</option>
+                                <option value="lazer">Cultura e Lazer</option>
+                                <option value="comunicacao">Comunicação</option>
+                                <option value="habitacao">Habitação</option>
+                                <option value="abastecimento">Agricultura e Abastecimento</option>
+                                <option value="ambiente">Meio Ambiente</option>
+                                <option value="emprego">Trabalho e Emprego</option>
+                                <option value="financas">Finanças Públicas</option>
+                            </select>
+                        </div>
+
+                        <!-- Notas para avaliação -->
+                        <div class="mb-3 d-none" id="avaliacao-categorias">
+                            <label class="form-label">Atribua uma nota (1 a 5) para cada categoria:</label>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="mb-2">
+                                        <label for="nota-saude" class="form-label">Saúde Pública</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-saude" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-educacao" class="form-label">Educação Pública</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-educacao" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-seguranca" class="form-label">Segurança Pública</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-seguranca" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-transporte" class="form-label">Transporte Público</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-transporte" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-saneamento" class="form-label">Saneamento Básico</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-saneamento" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-2">
+                                        <label for="nota-energia" class="form-label">Energia Elétrica</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-energia" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-assistencia" class="form-label">Assistência Social</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-assistencia" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-justica" class="form-label">Justiça</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-justica" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-lazer" class="form-label">Cultura e Lazer</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-lazer" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-comunicacao" class="form-label">Comunicação</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-comunicacao" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-2">
+                                        <label for="nota-habitacao" class="form-label">Habitação</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-habitacao" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-abastecimento" class="form-label">Agricultura e Abastecimento</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-abastecimento" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-ambiente" class="form-label">Meio Ambiente</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-ambiente" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-emprego" class="form-label">Trabalho e Emprego</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-emprego" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="nota-financas" class="form-label">Finanças Públicas</label>
+                                        <input type="number" class="form-control border-success-subtle" id="nota-financas" min="1" max="5" placeholder="1 a 5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
    
                        <!-- Descrição -->
                        <div class="mb-3">
@@ -159,24 +180,7 @@
         </nav>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script>
-        const tipoSolicitacao = document.getElementById('tipoSolicitacao');
-        const reclamacaoCategorias = document.getElementById('reclamacao-categorias');
-        const avaliacaoCategorias = document.getElementById('avaliacao-categorias');
-        const anexoEvidencias = document.getElementById('anexo-evidencias');
-        // Alternar visibilidade com base no tipo de solicitação
-        tipoSolicitacao.addEventListener('change', () => {
-            if (tipoSolicitacao.value === 'reclamacao') {
-                reclamacaoCategorias.classList.remove('d-none');
-                avaliacaoCategorias.classList.add('d-none');
-                anexoEvidencias.classList.remove('d-none');
-            } else if (tipoSolicitacao.value === 'avaliacao') {
-                avaliacaoCategorias.classList.remove('d-none');
-                reclamacaoCategorias.classList.add('d-none');
-                anexoEvidencias.classList.add('d-none');
-            }
-        });
-    </script>
+    <script src="../resident/home.js"></script>
+
 </body>
 </html>
