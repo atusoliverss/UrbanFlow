@@ -1,4 +1,4 @@
-import { saveReclamacao } from "./reclamacaoService.js";
+import { saveReclamacao } from "../../../assets/js/script.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const formSolicitacao = document.getElementById("form-solicitacao");

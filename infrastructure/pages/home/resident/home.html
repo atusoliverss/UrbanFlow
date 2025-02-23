@@ -40,99 +40,36 @@
                        </div>
    
                        <!-- Categoria para reclamação -->
-                        <div class="mb-3" id="reclamacao-categorias">
-                            <label class="form-label">Categoria</label>
-                            <select class="form-select border-success-subtle">
-                                <option value="saude">Saúde Pública</option>
-                                <option value="educacao">Educação Pública</option>
-                                <option value="seguranca">Segurança Pública</option>
-                                <option value="transporte">Transporte Público</option>
-                                <option value="saneamento">Saneamento Básico</option>
-                                <option value="energia">Energia Elétrica</option>
-                                <option value="assistencia">Assistência Social</option>
-                                <option value="justica">Justiça</option>
-                                <option value="lazer">Cultura e Lazer</option>
-                                <option value="comunicacao">Comunicação</option>
-                                <option value="habitacao">Habitação</option>
-                                <option value="abastecimento">Agricultura e Abastecimento</option>
-                                <option value="ambiente">Meio Ambiente</option>
-                                <option value="emprego">Trabalho e Emprego</option>
-                                <option value="financas">Finanças Públicas</option>
-                            </select>
-                        </div>
-
-                        <!-- Notas para avaliação -->
-                        <div class="mb-3 d-none" id="avaliacao-categorias">
-                            <label class="form-label">Atribua uma nota (1 a 5) para cada categoria:</label>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="mb-2">
-                                        <label for="nota-saude" class="form-label">Saúde Pública</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-saude" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-educacao" class="form-label">Educação Pública</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-educacao" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-seguranca" class="form-label">Segurança Pública</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-seguranca" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-transporte" class="form-label">Transporte Público</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-transporte" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-saneamento" class="form-label">Saneamento Básico</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-saneamento" min="1" max="5" placeholder="1 a 5">
-                                    </div>
+                        <div class="mb-3" id="categorias">
+                            <div class="d-flex gap-3" id="categoria-container">
+                                <div style="width: 100%;" id="categoria-select">
+                                    <label class="form-label">Categoria</label>
+                                    <select class="form-select border-success-subtle" >
+                                        <option value="saude">Saúde Pública</option>
+                                        <option value="educacao">Educação Pública</option>
+                                        <option value="seguranca">Segurança Pública</option>
+                                        <option value="transporte">Transporte Público</option>
+                                        <option value="saneamento">Saneamento Básico</option>
+                                        <option value="energia">Energia Elétrica</option>
+                                        <option value="assistencia">Assistência Social</option>
+                                        <option value="justica">Justiça</option>
+                                        <option value="lazer">Cultura e Lazer</option>
+                                        <option value="comunicacao">Comunicação</option>
+                                        <option value="habitacao">Habitação</option>
+                                        <option value="abastecimento">Agricultura e Abastecimento</option>
+                                        <option value="ambiente">Meio Ambiente</option>
+                                        <option value="emprego">Trabalho e Emprego</option>
+                                        <option value="financas">Finanças Públicas</option>
+                                    </select>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="mb-2">
-                                        <label for="nota-energia" class="form-label">Energia Elétrica</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-energia" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-assistencia" class="form-label">Assistência Social</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-assistencia" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-justica" class="form-label">Justiça</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-justica" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-lazer" class="form-label">Cultura e Lazer</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-lazer" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-comunicacao" class="form-label">Comunicação</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-comunicacao" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-2">
-                                        <label for="nota-habitacao" class="form-label">Habitação</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-habitacao" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-abastecimento" class="form-label">Agricultura e Abastecimento</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-abastecimento" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-ambiente" class="form-label">Meio Ambiente</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-ambiente" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-emprego" class="form-label">Trabalho e Emprego</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-emprego" min="1" max="5" placeholder="1 a 5">
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="nota-financas" class="form-label">Finanças Públicas</label>
-                                        <input type="number" class="form-control border-success-subtle" id="nota-financas" min="1" max="5" placeholder="1 a 5">
-                                    </div>
+                                <!-- Notas para avaliação -->
+                                <div class="d-none" id="nota-avaliacao" style="width: 35%;">
+                                    <label class="form-label">Nota</label>
+                                    <input type="number" class="form-control border-success-subtle" id="nota" min="1" max="5" placeholder="1 a 5">
                                 </div>
                             </div>
                         </div>
+
    
                        <!-- Descrição -->
                        <div class="mb-3">
@@ -183,21 +120,21 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const tipoSolicitacao = document.getElementById("tipoSolicitacao");
-            const reclamacaoCategorias = document.getElementById("reclamacao-categorias");
-            const avaliacaoCategorias = document.getElementById("avaliacao-categorias");
+            const avaliacaoNotas = document.getElementById("nota-avaliacao");
             const anexoEvidencias = document.getElementById("anexo-evidencias");
             const formSolicitacao = document.getElementById("form-solicitacao");
+            const categoriaSelect = document.getElementById("categoria-select");
 
             // Alternar visibilidade com base no tipo de solicitação
             tipoSolicitacao.addEventListener("change", () => {
                 if (tipoSolicitacao.value === "reclamacao") {
-                    reclamacaoCategorias.classList.remove("d-none");
-                    avaliacaoCategorias.classList.add("d-none");
                     anexoEvidencias.classList.remove("d-none");
+                    avaliacaoNotas.classList.add("d-none");
+                    categoriaSelect.style.width = "100%";
                 } else if (tipoSolicitacao.value === "avaliacao") {
-                    avaliacaoCategorias.classList.remove("d-none");
-                    reclamacaoCategorias.classList.add("d-none");
+                    avaliacaoNotas.classList.remove("d-none");
                     anexoEvidencias.classList.add("d-none");
+                    categoriaSelect.style.width = "65%";
                 }
             });
         });

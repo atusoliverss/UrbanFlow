@@ -1,4 +1,4 @@
-import axios from 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js';
+import axios from 'https://cdn.skypack.dev/axios';
 
 export async function findByLogin(userLogin) {
     try {
