@@ -18,7 +18,7 @@ export async function saveUser(userData, url) {
     const response = await axios.post(url, userData);
     return response.data; // Aqui esperamos um objeto no formato esperado
   } catch (error) {
-    console.error('Erro ao salvar usuário:', error);
+    console.error('Erro ao salvar usuário:', error.response?.data || error.message);
     throw error;
   }
 }
