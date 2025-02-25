@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dados específicos do administrador
     if (tipoUsuario === 'Administrador') {
       // const adminKey = document.getElementById('adminKey').value;
-      // if (adminKey !== 1357) {  // Aqui você pode validar a chave do admin
+      // if (adminKey != 1357) {  // Aqui você pode validar a chave do admin
       //   alert('Chave de acesso inválida!');
       //   return;
       // }
