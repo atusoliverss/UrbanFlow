@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const descricao = document.getElementById("descricao").value;
             const categoria = document.getElementById("categoria-select").querySelector("select").value;
-            const dataReclamacao = new Date().toISOString();
-            const nota = document.getElementById("nota-avaliacao");
+            const dataAvaliacao = new Date().toISOString();
+            const nota = document.getElementById("nota").value;
 
             // Recuperar o morador logado do localStorage
             const userData = JSON.parse(localStorage.getItem("user"));
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
              // Criar objeto JSON para enviar
              const avaliacaoData = {
                 nota: nota,
-                dataReclamacao: dataReclamacao,
+                dataAvaliacao: dataAvaliacao,
                 comentario: descricao,
                 morador: morador,
                 servico: categoria
