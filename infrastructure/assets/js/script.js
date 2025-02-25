@@ -18,7 +18,7 @@ export async function saveUser(userData, url) {
     const response = await axios.post(url, userData);
     return response.data; // Aqui esperamos um objeto no formato esperado
   } catch (error) {
-    console.error('Erro ao salvar usuário:', error);
+    console.error('Erro ao salvar usuário:', error.response?.data || error.message);
     throw error;
   }
 }
@@ -35,6 +35,15 @@ export async function saveReclamacao(reclamacaoData) {
   }
 }
 
+export async function saveAvaliacao(avaliacaoData) {
+  try {
+    console.log(JSON.stringify(avaliacaoData));
+    const response = await axios.post("http://localhost:8080/avaliacoes/save", avaliacaoData);
 
-
+    return response.data; // Retorna os dados da resposta do servidor
+  } catch (error) {
+    console.error("Erro ao salvar a avaliação:", error.response?.data || error.message);
+    throw error; // Propaga o erro para ser tratado no outro arquivo
+  }
+}
   
